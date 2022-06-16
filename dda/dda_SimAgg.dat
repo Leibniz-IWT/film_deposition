@@ -1,0 +1,34 @@
+# Here you find the simulation outputdata
+# Look into dda_Particles.dat for general simulation data and aggregate data
+#
+#######################################################
+# Experiment:							dda
+# Date:									2022-06-16 17:11
+
+#######################################################
+# Conditions acc to:					Pe
+# Peclet Number:						0.0000e+00
+# z-Velocity (m/s):						0.0000e+00
+# Box_size (rel. to r_mean):			280
+# Hight above max(z) (rel. to r_mean):	60
+# Timestep adjustment:					1.00
+# Temperature (K):						298.00
+#######################################################
+# Particle Size Distribution:			lognorm
+# Particle Mean Radius (nm):			4.48
+# Particle sDerivation:					0.37
+# Calculation Friction acc to:			Chen & Dahneke
+#######################################################
+# Primary particles:					20
+# Aggregates:							1
+# Particle Number Distribution:			none
+# Particles per Aggregate:				31
+#
+# Fractal Dimension / Prefactor:		1.80	1.30
+# Epsilon,Delta,Deformation:			1.001	1.010	1.000
+# One Material is used
+# Density (kg/m^3):						4.23e+03
+#
+#######################################################
+# Agg	Np	Diff_p(m^2/s)	frict	m_p(kg)	t_s(s)	r_g	rho(kg/m^3)
+0	20	4.829323e-09	8.519482e-13	3.184213e-20	2.077045e-09	2.002902e-08	4.230e+03

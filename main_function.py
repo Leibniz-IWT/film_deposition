@@ -94,6 +94,7 @@ def generate_film(params, source_file, num_cores, jobserver):
                     AGG_TYPE.append(2)
             elif params.Material_selection == 2:
                 # random distribution
+                #TODO: Base this on concentration
                 AGG_TYPE.append(random.randint(1, 2))
 
     # Print the terminal output with all the data
@@ -319,7 +320,10 @@ def particle_transport(aggs, pt, params, maximal_radius, write_lammpstrj):
             for PP in range(aggs[k].Np):
                 # If this if loop is not integrated single particles will be moved even though they cross the border.
                 # Like this they are not moved back to their position which was changed within the wall_check function.
-                aggs[k].z[PP] = aggs[k].z[PP] - aggs[k].hit[agg_p_hit]
+                try:
+                    aggs[k].z[PP] = aggs[k].z[PP] - aggs[k].hit[agg_p_hit]
+                except:
+                    pass
                 pt[count_PP + PP].z = aggs[k].z[PP]
                 pt[count_PP + PP].agg = k
             count_PP += aggs[k].Np
@@ -339,6 +343,7 @@ def particle_transport(aggs, pt, params, maximal_radius, write_lammpstrj):
 
     # write_lammpstrj.close()
     return max_z
+
 
 def post_proc(params, pt, aggs, source_file, max_z):
     output_folder = params.output_folder

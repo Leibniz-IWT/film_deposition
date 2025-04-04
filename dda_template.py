@@ -187,7 +187,7 @@ output_folder = './' + experiment +'/'
 #### Misc ##############
 ########################
 send_email = True
-toaddr = 'v.baric@iwt.uni-bremen.de'
+#oaddr = 'v.baric@iwt.uni-bremen.de'
 extra_text=''
 
 ########################
